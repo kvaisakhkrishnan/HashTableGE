@@ -11,7 +11,7 @@ class MyHashMap<K, V> {
         this.buckets = new MyMapNode[size];
     }
 
-    // Get the index for a key
+    // Get the index for a key using hash code
     private int getBucketIndex(K key) {
         int hashCode = key.hashCode();
         int index = hashCode % size;
