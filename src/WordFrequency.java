@@ -7,7 +7,6 @@ public class WordFrequency {
                 + "paranoid avoidable situations";
         MyHashMap<String, Integer> wordFrequencyMap = new MyHashMap<>(10);
 
-        // Tokenize the paragraph
         StringTokenizer tokenizer = new StringTokenizer(paragraph);
         while (tokenizer.hasMoreTokens()) {
             String word = tokenizer.nextToken().toLowerCase(); // Convert to lowercase for case-insensitive comparison
@@ -15,7 +14,12 @@ public class WordFrequency {
             wordFrequencyMap.put(word, frequency);
         }
 
-        // Display the frequency of words
+        System.out.println("Before removing 'avoidable':");
+        wordFrequencyMap.displayFrequency();
+
+        wordFrequencyMap.remove("avoidable");
+
+        System.out.println("\nAfter removing 'avoidable':");
         wordFrequencyMap.displayFrequency();
     }
 }

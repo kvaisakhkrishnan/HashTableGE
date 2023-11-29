@@ -5,7 +5,6 @@ class MyMapNode<K, V> {
     V value;
     MyMapNode<K, V> next;
 
-    // Constructor
     public MyMapNode(K key, V value) {
         this.key = key;
         this.value = value;
